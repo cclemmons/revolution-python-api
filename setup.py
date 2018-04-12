@@ -7,7 +7,7 @@ Setup for package installation.
 from setuptools import setup
 
 def readme():
-    with open('README.rst', 'r') as f:
+    with open('README.md', 'r') as f:
         description = f.read()
     return description
 
@@ -28,6 +28,17 @@ setup(
                   'Topic :: Software Development :: Libraries'],
     license= "GNU GPL v3",
     keywords='BITalino, Physiological Computing, Biosignal, Physiological Signal',
-    install_requires=[],
+    install_requires=[
+        'pyserial',
+        'numpy'
+    ],
+    extras_require={
+        'platform_system=="Windows"': [
+            'pybluez'
+        ],
+        'platform_system=="Linux"': [
+            'pybluze'
+        ]
+    },
     zip_safe=False
 )
