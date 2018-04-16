@@ -1,0 +1,8 @@
+pyserial
+numpy
+
+[platform_system=="Linux"]
+pybluze
+
+[platform_system=="Windows"]
+pybluez
