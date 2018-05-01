@@ -30,15 +30,9 @@ setup(
     keywords='BITalino, Physiological Computing, Biosignal, Physiological Signal',
     install_requires=[
         'pyserial',
-        'numpy'
+        'numpy',
+        'pybluez; platform_system=="Windows"',
+        'pybluez; platform_system=="Linux"',
     ],
-    extras_require={
-        'platform_system=="Windows"': [
-            'pybluez'
-        ],
-        'platform_system=="Linux"': [
-            'pybluze'
-        ]
-    },
     zip_safe=False
 )
